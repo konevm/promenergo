@@ -1,8 +1,10 @@
-import * as React from "react";
-import "./index.sass";
-import Layout from "../components/layout";
-import Seo from "../components/seo";
-import { StaticImage } from "gatsby-plugin-image";
+import * as React from "react"
+import "./index.sass"
+import Layout from "../components/layout"
+import Seo from "../components/seo"
+import { StaticImage } from "gatsby-plugin-image"
+import IndexElement from "../components/indexElement"
+import Data from "../components/DB/works.json"
 
 const IndexPage = () => {
   return (
@@ -44,7 +46,7 @@ const IndexPage = () => {
               </div>
             </div>
           </div>
-          <div style={{ display: "grid", marginBottom: "10px" }}>
+          {/* <div style={{ display: "grid", marginBottom: "10px" }}>
             <StaticImage
               style={{
                 gridArea: "1/1",
@@ -62,19 +64,29 @@ const IndexPage = () => {
                 gridArea: "1/1",
                 position: "relative",
                 display: "grid",
-                background:
-                  "linear-gradient(90deg, rgba(44,117,255,0) 0%, rgba(255,255,255,0) 27%, rgba(255,255,255,1) 80%)",
+                // background:
+                //   "linear-gradient(90deg, rgba(44,117,255,0) 0%, rgba(255,255,255,0) 27%, rgba(255,255,255,1) 80%)",
               }}
             >
               <div className="element__text" style={{ paddingRight: "50px" }}>
-                <p>Наружные работы на линиях электропередач</p>
+                <h2>{Data.Outdoor.name}</h2>
+                <ul>
+                  {Data.Outdoor.works.map(i => {
+                    return <li key={i.id}>{i.title}</li>
+                  })}
+                </ul>
               </div>
             </div>
-          </div>
+          </div> */}{" "}
+          <IndexElement key={Data.Outdoor.id} value={Data.Outdoor} />
+          <IndexElement
+            key={Data.ElectricPanel.id}
+            value={Data.ElectricPanel}
+          />
         </div>
       </main>
     </Layout>
-  );
-};
+  )
+}
 
-export default IndexPage;
+export default IndexPage
