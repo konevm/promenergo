@@ -46,43 +46,13 @@ const IndexPage = () => {
               </div>
             </div>
           </div>
-          {/* <div style={{ display: "grid", marginBottom: "10px" }}>
-            <StaticImage
-              style={{
-                gridArea: "1/1",
-                height: "100px",
-              }}
-              layout="fullWidth"
-              // aspectRatio={3 / 1}
-              alt=""
-              src="../images/electricity-gb52516f1a_1920.jpg"
-              formats={["auto", "webp", "avif"]}
-            />
-            <div
-              className="element__wrapper"
-              style={{
-                gridArea: "1/1",
-                position: "relative",
-                display: "grid",
-                // background:
-                //   "linear-gradient(90deg, rgba(44,117,255,0) 0%, rgba(255,255,255,0) 27%, rgba(255,255,255,1) 80%)",
-              }}
-            >
-              <div className="element__text" style={{ paddingRight: "50px" }}>
-                <h2>{Data.Outdoor.name}</h2>
-                <ul>
-                  {Data.Outdoor.works.map(i => {
-                    return <li key={i.id}>{i.title}</li>
-                  })}
-                </ul>
-              </div>
-            </div>
-          </div> */}{" "}
           <IndexElement key={Data.Outdoor.id} value={Data.Outdoor} />
           <IndexElement
             key={Data.ElectricPanel.id}
             value={Data.ElectricPanel}
           />
+          <IndexElement key={Data.Indoor.id} value={Data.Indoor} />
+          <IndexElement key={Data.Road.id} value={Data.Road} />
         </div>
       </main>
     </Layout>
