@@ -1,4 +1,12 @@
 @import "../components/styles/variables"
+@mixin any-title
+    text-transform: uppercase
+    font-family: Jura, sans-serif
+    font-weight: 700
+    padding: 0
+    margin: 0
+    color: $titles
+    text-align: center
 
 body
     margin: 0
@@ -16,7 +24,7 @@ body
 .header
     width: calc(100% - 80px)
     height: 2rem
-    background-color: $main-color
+    background-color: white
     color: $secondary-color
     text-transform: uppercase
     padding: 0 40px
@@ -29,7 +37,7 @@ body
     position: sticky
     top: 0
     z-index: 3
-    box-shadow: 0 0 5px 5px #8bb4ff
+    // box-shadow: 0 0 5px 5px #8bb4ff
 
     .header__name
         font-weight: 700
@@ -42,9 +50,9 @@ body
         justify-content: space-between
         a
             padding: 5px 10px
-            border: 3px solid $main-color
+            // border: 3px solid $main-color
             border-radius: 7px
-            box-shadow: 0 0 3px 3px #8bb4ff inset
+            // box-shadow: 0 0 3px 3px #8bb4ff inset
 
     a, a::after
         text-decoration: none
@@ -59,6 +67,13 @@ main
     main
 
         padding: 0
+
+.title
+    @include any-title
+    font-size: 3rem
+    padding: 40px 0
+    text-decoration: underline
+
 .main__title
     text-transform: uppercase
     font-family: Jura, sans-serif

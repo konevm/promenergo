@@ -1,7 +1,7 @@
-import * as React from "react";
-import Layout from "../components/layout";
-import Seo from "../components/seo";
-import { YMaps, Map, Placemark } from "react-yandex-maps";
+import * as React from "react"
+import Layout from "../components/layout"
+import Seo from "../components/seo"
+import { YMaps, Map, Placemark } from "react-yandex-maps"
 
 const titleStyle = {
   padding: "15px 0px",
@@ -9,9 +9,9 @@ const titleStyle = {
   textTransform: "uppercase",
   fontFamily: "Roboto, sans-serif",
   fontSize: "2rem",
-  color: "#4538b8",
+  color: "#1d2e70",
   fontWeight: "700",
-};
+}
 
 const Contacts = () => {
   return (
@@ -99,7 +99,7 @@ const Contacts = () => {
         </div>
       </div>
     </Layout>
-  );
-};
+  )
+}
 
-export default Contacts;
+export default Contacts

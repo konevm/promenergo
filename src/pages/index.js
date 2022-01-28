@@ -5,6 +5,7 @@ import Seo from "../components/seo"
 import { StaticImage } from "gatsby-plugin-image"
 import IndexElement from "../components/indexElement"
 import Data from "../components/DB/works.json"
+import Benefits from "../components/Benefits"
 
 const IndexPage = () => {
   return (
@@ -33,10 +34,11 @@ const IndexPage = () => {
               }}
             >
               <div className="title__text" style={{ paddingRight: "50px" }}>
-                <h1 className="main__title">
+                <h1 className="title">Промэнерго выбирают за качество!</h1>
+                <h2 className="main__title">
                   Вам нужно проложить кабель? Провести линию на несколько
                   километров? Поставить столбы освещения?
-                </h1>
+                </h2>
                 <p>
                   Мы вам поможем! <br />
                   <br />
@@ -53,6 +55,8 @@ const IndexPage = () => {
           />
           <IndexElement key={Data.Indoor.id} value={Data.Indoor} />
           <IndexElement key={Data.Road.id} value={Data.Road} />
+          <h2 className="title">Почему стоит выбрать нас?</h2>
+          <Benefits />
         </div>
       </main>
     </Layout>

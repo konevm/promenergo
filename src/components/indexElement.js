@@ -12,7 +12,7 @@ const IndexElement = ({ value }) => {
     <div className="element__wrapper">
       <div className="element__imgBorder">
         <img
-          src={Img}
+          src={`/${Img}`}
           alt={value.name}
           className="picture"
           id={Img}
@@ -20,7 +20,7 @@ const IndexElement = ({ value }) => {
         />
       </div>
       <div className="element__text">
-        <h2>{value.name}</h2>
+        <h3>{value.name}</h3>
         <ul>
           {value.works.map(i => {
             return <li key={i.id}>{i.title}</li>

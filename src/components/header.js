@@ -1,5 +1,5 @@
-import * as React from "react";
-import { Link } from "gatsby";
+import * as React from "react"
+import { Link } from "gatsby"
 
 const Header = ({ siteTitle }) => {
   return (
@@ -9,7 +9,8 @@ const Header = ({ siteTitle }) => {
         <Link
           to="/"
           activeStyle={{
-            backgroundColor: "white",
+            textDecoration: "underline",
+            textDecorationColor: "#4538b8",
           }}
         >
           Главная
@@ -17,7 +18,8 @@ const Header = ({ siteTitle }) => {
         <Link
           to="/about"
           activeStyle={{
-            backgroundColor: "white",
+            textDecoration: "underline",
+            textDecorationColor: "#4538b8",
           }}
         >
           О нас
@@ -25,14 +27,15 @@ const Header = ({ siteTitle }) => {
         <Link
           to="/contacts"
           activeStyle={{
-            backgroundColor: "white",
+            textDecoration: "underline",
+            textDecorationColor: "#4538b8",
           }}
         >
           Контакты
         </Link>
       </nav>
     </div>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header
